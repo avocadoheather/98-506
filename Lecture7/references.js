@@ -14,7 +14,7 @@ console.log("Naive:", gameLevels)
 console.log()
 
 // Comment this out to continue to the later code
-process.exit()
+// process.exit()
 
 // Spread operator approach
 basicLevel = {
@@ -35,7 +35,7 @@ console.log("basicLevel (modified):", basicLevel)
 console.log()
 
 // Comment this out to continue to the later code
-process.exit()
+// process.exit()
 
 // Structured clone approach
 basicLevel = {
