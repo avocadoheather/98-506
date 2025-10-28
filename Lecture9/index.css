@@ -3,11 +3,12 @@ body {
     padding: 0;
 }
 
-#nav {
+nav {
     position: sticky;
     top: 0;
     width: 100%;
     border-bottom: 1px solid black;
+    background: red;
 }
 
 #grid-container {
@@ -59,6 +60,7 @@ body {
         width: 90vw;
         left: -90vw;
         height: max(300px, 80vh);
+        transition: 0.3s;
     }
 
     #sidebar.open {
