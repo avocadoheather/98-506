@@ -3,7 +3,7 @@
 // Let's start by selecting the button and
 // where we'll be filling in the user info:
 const button = document.getElementById("load");
-const userInfo = document.getElementById("user");
+const userDiv = document.getElementById("user");
 
 // Then we'll add an event listener so that
 // when we click the button, we show a user.
@@ -20,8 +20,9 @@ async function getUser() {
         const response = await fetch("https://randomuser.me/api/");
         const result = await response.json();
         
-        const person = result.results[0];
         // We want the first person in the results entry
+        const person = result.results[0];
+        
         // From there, we would like to get the name (in the name entry, {first, last}),
         // location (in the location entry, country),
         // and image (in the picture entry, medium)

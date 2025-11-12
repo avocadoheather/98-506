@@ -36,7 +36,13 @@ getImageButton.addEventListener("click", async () => {
 })
 
 sendFetchButton.addEventListener("click", async () => {
-    const res = await fetch("http://127.0.0.1:3000/fetch-test");
+    const res = await fetch("http://127.0.0.1:3000/fetch-test?test-param=yes", {
+        // method: "PATCH",
+        // body: "This is a string of content",
+        headers: {
+            "test-header": "test-value"
+        }
+    });
 
     console.log(res.status);
     console.log(res.headers.entries().toArray());
