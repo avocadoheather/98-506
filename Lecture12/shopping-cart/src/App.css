@@ -6,8 +6,8 @@
 }
 
 .product-list {
-  display: inline-grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: inline-flex;
+  flex-wrap: wrap;
   justify-items: center;
   gap: 5px;
 }
