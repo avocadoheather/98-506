@@ -1,0 +1,13 @@
+/* This is CSS code loaded by App.jsx */
+
+#root {
+  max-width: 1280px;
+  padding: 2rem;
+}
+
+.product-list {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 5px;
+}

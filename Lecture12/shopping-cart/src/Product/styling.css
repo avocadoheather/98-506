@@ -1,0 +1,26 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    border: 1.2px solid transparent;
+    padding: 5px;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+.product:hover {
+    border-color: black;
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.cart-button {
+    display: flex;
+    gap: 5px;
+    height: 1.5em;
+}
