@@ -5,7 +5,7 @@ const c = elem.getContext("2d");
 elem.width = elem.getBoundingClientRect().width;
 elem.height = elem.getBoundingClientRect().height;
 
-const TIME_BEFORE_DISAPPEAR = 1000;
+const TIME_BEFORE_DISAPPEAR = 1500;
 
 // Draw stuff here!
 let positions = [];
@@ -39,32 +39,11 @@ const drawPos = () => {
         b) if it's more than TIME_BEFORE_DISAPPEARING, break
        Draw with color hue based on index
     */
-    for(let i = positions.length - 1; i >= 0; i--) {
-        const { x, y, time } = positions[i];
-        const timeSincePoint = currentTime - time;
-
-        if(timeSincePoint > TIME_BEFORE_DISAPPEAR) {
-            index = i;
-            break;
-        }
-
-        c.beginPath();
-        const opacity = 1 - timeSincePoint / TIME_BEFORE_DISAPPEAR;
-        c.fillStyle = `hsl(${i}, 75%, 75%, ${opacity})`;
-        c.arc(x, y, opacity*5, 0, 2*Math.PI);
-        c.fill();
-    }
 
     // If slicing part of the array, do it here
-    if (index !== null) {
-        positions.slice(-index);
-    }
     
     // Turn this into an animation!
     requestAnimationFrame(drawPos);
 }
 
 // Set drawPos to run as an animation!
-requestAnimationFrame(drawPos);
-
-// check out codepen.io
